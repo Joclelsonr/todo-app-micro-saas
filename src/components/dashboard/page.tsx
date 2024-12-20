@@ -30,7 +30,7 @@ export function DashboardPageHeaderTitle({
   children,
 }: DashboardGenericProps) {
   return (
-    <h1 className={cn(["text-muted-foreground uppercase", className])}>
+    <h1 className={cn(["p-1 text-muted-foreground uppercase", className])}>
       {children}
     </h1>
   );
@@ -47,5 +47,9 @@ export function DashboardPageMain({
   className,
   children,
 }: DashboardGenericProps) {
-  return <main className={cn(["p-6", className])}>{children}</main>;
+  return (
+    <main className={cn(["p-6 flex justify-center", className])}>
+      {children}
+    </main>
+  );
 }
