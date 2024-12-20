@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontRoboto = Roboto({
   weight: ["400", "500", "700"],
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${fontRoboto}`}>{children}</body>
+      <body className={`${fontRoboto}`}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }
